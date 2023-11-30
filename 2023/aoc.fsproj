@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <PublishAot>true</PublishAot>
+    <TargetFramework>net8.0</TargetFramework>
+    <StripSymbols>false</StripSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="day_1.fs" />
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+</Project>
