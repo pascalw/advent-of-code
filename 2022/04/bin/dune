@@ -1,0 +1,15 @@
+(executable
+ (public_name aoc_04_1)
+ (modules main_1)
+ (name main_1)
+ (libraries aoc_04))
+(executable
+ (public_name aoc_04_2)
+ (modules main_2)
+ (name main_2)
+ (libraries aoc_04))
+(executable
+ (public_name aoc_04_test)
+ (modules test)
+ (name test)
+ (libraries ounit2 aoc_04))

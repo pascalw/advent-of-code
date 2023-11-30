@@ -1,0 +1,11 @@
+(lang dune 2.9)
+(name aoc_06)
+
+(generate_opam_files true)
+
+(package
+ (name aoc_06)
+ (depends
+  (ocaml (>= 4.14.0))
+  (core (>= 0.15.1)))
+ (synopsis "Advent of Code day 6"))
