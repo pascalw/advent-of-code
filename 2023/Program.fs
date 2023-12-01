@@ -1,4 +1,5 @@
 [<EntryPoint>]
 let main = function
-  | [| "1"|_|] -> Day1.run()
+  | [| "1" |] -> Day1.run()
+  | [| "1:2" |] -> Day1_2.run()
   | _ -> 1
