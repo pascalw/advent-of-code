@@ -7,8 +7,6 @@ type Cube =
 
 type Game = { id: int; sets: seq<seq<Cube>> }
 
-let inline charToInt c = int c - int '0'
-
 let (|SetValue|_|) (suffix: string) (s: string) =
     match s.EndsWith(suffix) with
     | true -> Some(s.Substring(0, s.Length - suffix.Length))
