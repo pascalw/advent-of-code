@@ -10,16 +10,18 @@ let parse (input: seq<string>) =
     |> Seq.toArray
     |> Array.unzip
 
-let countOccurences occurences item : int =
-    occurences
-    |> Seq.tryFind (fun (i, _) -> i = item)
-    |> function
-        | Some((_, n)) -> n
-        | None -> 0
+let occurenceCounter list =
+    let occurences = Seq.countBy id list
+
+    fun n ->
+        occurences
+        |> Seq.tryFind (fun (i, _) -> i = n)
+        |> function
+            | Some((_, n)) -> n
+            | None -> 0
 
 let similarityScores (left, right) =
-    let occurences = Seq.countBy id right
-    let countOccurences' = countOccurences occurences
+    let countOccurences' = occurenceCounter right
     let score = fun number -> number * (countOccurences' number)
 
     left |> Seq.map score |> Seq.reduce (+)
