@@ -1,0 +1,8 @@
+(executable
+ (public_name day_1_1)
+ (libraries base stdio))
+
+(env
+ (dev
+  (flags
+   (:standard -warn-error -A))))
