@@ -1,5 +1,5 @@
-(executable
- (public_name day_1_1)
+(executables
+ (public_names day_1_1 day_2_1)
  (libraries base stdio))
 
 (env
